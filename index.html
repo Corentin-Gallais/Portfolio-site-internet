@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corentin Gallais - Développeur fullstack</title>
-    <meta name="description" content="Portfolio de Corentin Gallais, développeur fullstack en recherche d'alternance">
+    <title>Corentin Gallais | Développeur Fullstack | Portfolio Professionnel</title>
+    <meta name="description" content="Portfolio de Corentin Gallais, développeur fullstack spécialisé en JavaScript, React et Node.js, en recherche d'alternance. Découvrez mes projets et compétences.">
+    <meta name="keywords" content="développeur fullstack, portfolio, alternance, javascript, react, web development">
+    <meta name="author" content="Corentin Gallais">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://votredomaine.com">
     
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/logo.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
-
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votredomaine.com">
+    <meta property="og:title" content="Corentin Gallais | Développeur Fullstack">
+    <meta property="og:description" content="Portfolio de Corentin Gallais, développeur fullstack en recherche d'alternance">
+    <meta property="og:image" content="https://votredomaine.com/assets/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votredomaine.com">
+    <meta property="twitter:title" content="Corentin Gallais | Développeur Fullstack">
+    <meta property="twitter:description" content="Portfolio de Corentin Gallais, développeur fullstack en recherche d'alternance">
+    <meta property="twitter:image" content="https://votredomaine.com/assets/img/og-image.jpg">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -155,585 +174,576 @@
 </head>
 
 <body class="bg-dark-900 text-white font-inter overflow-x-hidden">
-    <!-- Loading Screen -->
-    <div id="loading" class="fixed inset-0 bg-dark-900 flex items-center justify-center z-50 transition-opacity duration-500">
-        <div class="text-center">
-            <div class="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p class="text-gray-400 animate-pulse">Chargement...</p>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-40 glass-effect border-b border-white/10">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between md:justify-center">
-                <!-- Logo -->
-                <a href="#hero" class="flex items-center md:absolute md:left-6">
-                    <img src="assets/img/logo.webp" alt="Corentin Gallais" class="w-10 h-10 rounded-lg">
-                </a>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-6 relative">
-                    <div class="nav-indicator w-0"></div>
-                    <a href="#hero" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">Accueil</a>
-                    <a href="#about" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">À propos</a>
-                    <a href="#skills" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">Compétences</a>
-                    <a href="#resume" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">CV</a>
-                    <a href="#github" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">GitHub</a>
+    <!-- Header sémantique -->
+    <header>
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-40 glass-effect border-b border-white/10" aria-label="Navigation principale">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between md:justify-center">
+                    <!-- Logo -->
+                    <a href="#hero" class="flex items-center md:absolute md:left-6">
+                        <img src="assets/img/logo.webp" alt="Logo Corentin Gallais" class="w-10 h-10 rounded-lg" width="40" height="40" loading="eager">
+                    </a>
                     
-                    <!-- Social Links (intégrés dans la navigation) -->
-                    <a href="https://github.com/Corentin-Gallais" target="_blank" class="w-8 h-8 bg-dark-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-all duration-300 transform hover:scale-110">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/corentin-gallais-2b32832a5/" target="_blank" class="w-8 h-8 bg-dark-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-all duration-300 transform hover:scale-110">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- CV Download Button -->
-                <div class="hidden md:block md:absolute md:right-6">
-                    <a href="GallaisCorentin.pdf" id="cv-download-link" download class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                        CV
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div
-            
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <div class="space-y-2">
-                    <a href="#hero" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">Accueil</a>
-                    <a href="#about" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">À propos</a>
-                    <a href="#skills" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">Compétences</a>
-                    <a href="#resume" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">CV</a>
-                    <a href="#github" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">GitHub</a>
-                    <!-- Social Links (Mobile) -->
-                    <div class="flex space-x-3 py-2 px-4">
-                        <a href="https://github.com/Corentin-Gallais" target="_blank" class="w-9 h-9 bg-dark-900 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-6 relative">
+                        <div class="nav-indicator w-0"></div>
+                        <a href="#hero" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">Accueil</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">À propos</a>
+                        <a href="#skills" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">Compétences</a>
+                        <a href="#resume" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">CV</a>
+                        <a href="#github" class="nav-link text-gray-300 hover:text-primary-500 transition-colors duration-300 py-2 px-4 relative">GitHub</a>
+                        
+                        <!-- Social Links (intégrés dans la navigation) -->
+                        <a href="https://github.com/Corentin-Gallais" target="_blank" rel="noopener" aria-label="Profil GitHub de Corentin Gallais" class="w-8 h-8 bg-dark-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/corentin-gallais-2b32832a5/" target="_blank" class="w-9 h-9 bg-dark-900 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="https://www.linkedin.com/in/corentin-gallais-2b32832a5/" target="_blank" class="w-8 h-8 bg-dark-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
                     </div>
-                    <!-- Lien CV dans le menu mobile -->
-                    <a href="GallaisCorentin.pdf" download class="block bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition-colors font-semibold">Télécharger CV</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <!-- Canvas Background -->
-        <canvas id="hero-canvas" class="particles-canvas"></canvas>
-        
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 gradient-bg opacity-20"></div>
-        
-        <!-- Content -->
-        <div class="container mx-auto px-6 text-center z-10 relative">
-            <!-- Avatar - Image dézoomée mais conteneur inchangé -->
-            <div class="relative mb-16 mt-24 inline-block">
-                <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl hover-glow animate-float">
-                    <img src="https://github.com/Corentin-Gallais.png" alt="Corentin Gallais" class="w-full h-full object-cover scale-[0.85] transform">
-                </div>
-                <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-primary-500 to-blue-400 opacity-20 blur animate-pulse-slow"></div>
-            </div>
-            
-            <!-- Name -->
-            <h1 class="text-5xl md:text-7xl font-black mb-6 animate-slide-up">
-                <span class="block bg-gradient-to-r from-white via-primary-500 to-blue-400 bg-clip-text text-transparent">
-                    Corentin
-                </span>
-                <span class="block bg-gradient-to-r from-blue-400 via-primary-500 to-white bg-clip-text text-transparent">
-                    Gallais
-                </span>
-            </h1>
-            
-            <!-- Typing Effect -->
-            <div class="text-2xl md:text-3xl text-primary-500 mb-8 font-mono">
-                <span id="typing-text" class="typing-effect">Développeur fullstack</span>
-            </div>
-            
-            <!-- Description -->
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
-                Étudiant en Bachelor, passionné par le développement web et logiciel. 
-                À la recherche d'une alternance pour octobre 2025.
-            </p>
-            
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-up">
-                <a href="#about" class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 rounded-full hover:from-primary-700 hover:to-primary-800 transition-all duration-300 transform hover:scale-105 hover-glow font-semibold">
-                    Découvrir mon profil
-                </a>
-                <a href="mailto:corentin.gallais35@gmail.com" class="px-8 py-4 border-2 border-primary-500 rounded-full hover:bg-primary-500 transition-all duration-300 transform hover:scale-105 font-semibold">
-                    Me contacter
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
-                    À PROPOS
-                </span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    Qui suis-je ?
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Un développeur passionné avec une soif d'apprendre et de créer
-                </p>
-            </div>
-            
-            <!-- Content Grid -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="space-y-6">
-                    <p class="text-lg text-primary-400 font-semibold leading-relaxed">
-                        Étudiant en 3ᵉ année de Bachelor à Sup de Vinci, je recherche une alternance 
-                        en développement informatique à partir d'octobre 2025.
-                    </p>
-                    
-                    <p class="text-gray-300 leading-relaxed">
-                        Curieux et rigoureux, je pratique le développement web et logiciel avec des 
-                        technologies comme C#, Java, Python, ainsi que les bases de données NoSQL. 
-                        Je m'intéresse également aux systèmes et à l'électronique.
-                    </p>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-8 pt-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-black text-primary-500 mb-2">20</div>
-                            <div class="text-gray-400 text-sm">Ans</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-black text-primary-500 mb-2">3</div>
-                            <div class="text-gray-400 text-sm">Années d'études</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-black text-primary-500 mb-2">8+</div>
-                            <div class="text-gray-400 text-sm">Technologies</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Info Card -->
-                <div class="bg-dark-900 rounded-2xl p-8 border border-gray-700 hover-glow">
-                    <h3 class="text-2xl font-bold text-primary-500 mb-6 border-b border-primary-500 pb-3">
-                        Informations personnelles
-                    </h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Âge</span>
-                            <span class="font-semibold">20 ans</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Téléphone</span>
-                            <span class="font-semibold">06 24 03 18 06</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Email</span>
-                            <span class="font-semibold text-primary-400">corentin.gallais35@gmail.com</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Localisation</span>
-                            <span class="font-semibold">Gosné, France</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2">
-                            <span class="text-gray-400">Permis</span>
-                            <span class="font-semibold">Permis B (véhiculé)</span>
-                        </div>
+                    <!-- CV Download Button -->
+                    <div class="hidden md:block md:absolute md:right-6">
+                        <a href="GallaisCorentin.pdf" id="cv-download-link" download class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            CV
+                        </a>
                     </div>
                     
-                    <!-- Interests -->
-                    <div class="mt-8">
-                        <h4 class="text-lg font-semibold text-primary-500 mb-4">Centres d'intérêt</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Informatique</span>
-                            <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Jeux vidéo</span>
-                            <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Tennis de table</span>
-                            <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Lecture</span>
-                            <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Manga</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
-                    COMPÉTENCES
-                </span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    Technologies maîtrisées
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Un aperçu de mes compétences techniques et de mon niveau dans chaque technologie
-                </p>
-            </div>
-            
-            <!-- Skills Grid -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Web Development -->
-                <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
-                    <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Développement Web</h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">HTML</span>
-                                <span class="text-primary-500 font-mono">70%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="70"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">CSS</span>
-                                <span class="text-primary-500 font-mono">65%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="65"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">JavaScript</span>
-                                <span class="text-primary-500 font-mono">55%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="55"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Backend Development -->
-                <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
-                    <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Développement Logiciel</h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">C#</span>
-                                <span class="text-primary-500 font-mono">60%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Java</span>
-                                <span class="text-primary-500 font-mono">50%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="50"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Python</span>
-                                <span class="text-primary-500 font-mono">55%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="55"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Database & Systems -->
-                <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
-                    <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Bases de données & Systèmes</h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">MongoDB</span>
-                                <span class="text-primary-500 font-mono">60%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Linux/Windows</span>
-                                <span class="text-primary-500 font-mono">60%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Hardware -->
-                <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
-                    <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Électronique & Hardware</h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Arduino</span>
-                                <span class="text-primary-500 font-mono">45%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
-                                <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="45"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="py-20 bg-dark-800">
-        <div class="container mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
-                    PARCOURS
-                </span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    Mon CV
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Formation, expériences et projets qui construisent mon profil
-                </p>
-            </div>
-            
-            <!-- Timeline Grid -->
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Formation -->
-                <div>
-                    <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Formation</h3>
-                    <div class="space-y-8">
-                        <!-- Bachelor -->
-                        <div class="relative pl-8 border-l-2 border-primary-500">
-                            <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-500 rounded-full"></div>
-                            <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                                <div class="text-primary-400 font-semibold mb-2">2023 - Aujourd'hui</div>
-                                <h4 class="text-xl font-bold mb-2">Bachelor - Sup de Vinci</h4>
-                                <p class="text-gray-300 mb-4">Développement informatique • 2ᵉ année</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Programmation</span>
-                                    <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Web</span>
-                                    <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Bases de données</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Baccalauréat -->
-                        <div class="relative pl-8 border-l-2 border-primary-500">
-                            <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-500 rounded-full"></div>
-                            <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                                <div class="text-primary-400 font-semibold mb-2">2023</div>
-                                <h4 class="text-xl font-bold mb-2">Baccalauréat STI2D</h4>
-                                <p class="text-gray-300 mb-4">Lycée Frédéric Ozanam</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Sciences</span>
-                                    <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Technologie</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Expériences -->
-                <div>
-                    <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Expériences</h3>
-                    <div class="space-y-8">
-                        <!-- Lidl -->
-                        <div class="relative pl-8 border-l-2 border-green-500">
-                            <div class="absolute -left-2 top-0 w-4 h-4 bg-green-500 rounded-full"></div>
-                            <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                                <div class="text-green-400 font-semibold mb-2">10/2024 - Présent</div>
-                                <h4 class="text-xl font-bold mb-2">Opérateur logistique - Lidl</h4>
-                                <p class="text-gray-300 mb-4">Préparation de commandes dans une plateforme logistique (job étudiant - samedis)</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Logistique</span>
-                                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Organisation</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Stage 6TM -->
-                        <div class="relative pl-8 border-l-2 border-blue-500">
-                            <div class="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                                <div class="text-blue-400 font-semibold mb-2">2020</div>
-                                <h4 class="text-xl font-bold mb-2">Stage d'observation - 6TM</h4>
-                                <p class="text-gray-300 mb-4">Découverte des métiers du développement et du monde de l'informatique</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Développement</span>
-                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Découverte</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Projets -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Projets marquants</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Blog NoSQL -->
-                    <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold">Blog NoSQL</h4>
-                            <span class="text-primary-400 font-semibold text-sm">10/2024 - 11/2024</span>
-                        </div>
-                        <p class="text-gray-300 mb-4">Réalisation d'un blog en groupe avec inscription utilisateurs, consultation/ajout d'articles et commentaires.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">MongoDB</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Tailwind</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Gestion bibliothèque -->
-                    <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold">Gestion de bibliothèque</h4>
-                            <span class="text-primary-400 font-semibold text-sm">11/2024</span>
-                        </div>
-                        <p class="text-gray-300 mb-4">Création/édition/suppression de livres avec stockage JSON et filtrage/recherche.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">C#</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">JSON</span>
-                            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">CRUD</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GitHub Section -->
-    <section id="github" class="py-20 bg-dark-900">
-        <div class="container mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
-                    CODE
-                </span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    Mes dépôts GitHub
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Découvrez mes projets et contributions en temps réel
-                </p>
-            </div>
-            
-            <!-- Filters -->
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-                <div class="flex flex-wrap gap-2">
-                    <button class="filter-btn px-4 py-2 bg-primary-500 text-white rounded-lg font-semibold transition-all duration-300" data-filter="all">
-                        Tous
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
-                    <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="recent">
-                        Récents
-                    </button>
-                    <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="starred">
-                        Populaires
-                    </button>
-                    <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="archived">
-                        Archivés
-                    </button>
-                </div>
+                </div
                 
-                <div class="relative">
-                    <input type="text" id="repo-search" placeholder="Rechercher un dépôt..." class="bg-dark-800 border border-gray-700 rounded-lg px-4 py-2 pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors">
-                    <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                    <div class="space-y-2">
+                        <a href="#hero" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">Accueil</a>
+                        <a href="#about" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">À propos</a>
+                        <a href="#skills" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">Compétences</a>
+                        <a href="#resume" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">CV</a>
+                        <a href="#github" class="block text-gray-300 hover:text-primary-500 py-2 px-4 rounded transition-colors">GitHub</a>
+                        <!-- Social Links (Mobile) -->
+                        <div class="flex space-x-3 py-2 px-4">
+                            <a href="https://github.com/Corentin-Gallais" target="_blank" rel="noopener" aria-label="Profil GitHub de Corentin Gallais" class="w-9 h-9 bg-dark-900 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/corentin-gallais-2b32832a5/" target="_blank" class="w-9 h-9 bg-dark-900 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Lien CV dans le menu mobile -->
+                        <a href="GallaisCorentin.pdf" download class="block bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition-colors font-semibold">Télécharger CV</a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Repositories Grid -->
-            <div id="repositories-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Loading State -->
-                <div class="col-span-full text-center py-12">
-                    <div class="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p class="text-gray-400">Chargement des dépôts GitHub...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Remplace ton bloc <footer> existant par celui-ci -->
-<footer class="bg-dark-800 border-t border-gray-700 py-12">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="text-center md:text-left mb-6 md:mb-0">
-        <h3 class="text-2xl font-bold text-primary-500 mb-2">Corentin Gallais</h3>
-        <p class="text-gray-400 mb-2">Développeur junior • Alternance à partir d'octobre 2025</p>
-        <div class="text-gray-400 text-sm">
-          <p>corentin.gallais35@gmail.com</p>
-          <p>06 24 03 18 06</p>
-        </div>
-
-        <!-- Liens légaux -->
-        <nav class="mt-4 text-sm text-gray-400">
-          <a href="mentions-legales.html" class="hover:text-primary-400 underline-offset-4 hover:underline">Mentions légales</a>
-          <span class="mx-2" aria-hidden="true">•</span>
-          <a href="politique-confidentialite.html" class="hover:text-primary-400 underline-offset-4 hover:underline">Politique de confidentialité</a>
         </nav>
+    </header>
 
-        <!-- Dans le footer, remplace juste le span de l'année -->
-<p class="text-gray-500 text-xs mt-3">
-  © <span id="current-year"></span> Corentin Gallais — Tous droits réservés.
-</p>
-      <div class="flex space-x-6">
-        <!-- Tes icônes/LIENS sociaux existants restent ici -->
-        <!-- Exemple:
-        <a href="https://github.com/Corentin-Gallais" target="_blank" class="w-12 h-12 bg-dark-900 rounded-full flex items-center justify-center hover:bg-primary-500 transition-all duration-300 transform hover:scale-110">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">...</svg>
-        </a>
-        -->
-      </div>
-    </div>
-  </div>
-</footer>
+    <!-- Section principale -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" aria-label="Présentation">
+            <!-- Canvas Background -->
+            <canvas id="hero-canvas" class="particles-canvas"></canvas>
+            
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 gradient-bg opacity-20"></div>
+            
+            <!-- Content -->
+            <div class="container mx-auto px-6 text-center z-10 relative">
+                <!-- Avatar - Image dézoomée mais conteneur inchangé -->
+                <div class="relative mb-16 mt-24 inline-block">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl hover-glow animate-float">
+                        <img src="https://github.com/Corentin-Gallais.png" alt="Corentin Gallais" class="w-full h-full object-cover scale-[0.85] transform">
+                    </div>
+                    <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-primary-500 to-blue-400 opacity-20 blur animate-pulse-slow"></div>
+                </div>
+                
+                <!-- Name -->
+                <h1 class="text-5xl md:text-7xl font-black mb-6 animate-slide-up">
+                    <span class="block bg-gradient-to-r from-white via-primary-500 to-blue-400 bg-clip-text text-transparent">
+                        Corentin
+                    </span>
+                    <span class="block bg-gradient-to-r from-blue-400 via-primary-500 to-white bg-clip-text text-transparent">
+                        Gallais
+                    </span>
+                </h1>
+                
+                <!-- Typing Effect -->
+                <div class="text-2xl md:text-3xl text-primary-500 mb-8 font-mono">
+                    <span id="typing-text" class="typing-effect">Développeur fullstack</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
+                    Étudiant en Bachelor, passionné par le développement web et logiciel. 
+                    À la recherche d'une alternance pour octobre 2025.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-up">
+                    <a href="#about" class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 rounded-full hover:from-primary-700 hover:to-primary-800 transition-all duration-300 transform hover:scale-105 hover-glow font-semibold">
+                        Découvrir mon profil
+                    </a>
+                    <a href="mailto:corentin.gallais35@gmail.com" class="px-8 py-4 border-2 border-primary-500 rounded-full hover:bg-primary-500 transition-all duration-300 transform hover:scale-105 font-semibold">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<script>
-  // Keep comments/logs in English
-  (function(){ var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }})();
-</script>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-dark-800" aria-label="À propos">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
+                        À PROPOS
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                        Qui suis-je ?
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                        Un développeur passionné avec une soif d'apprendre et de créer
+                    </p>
+                </div>
+                
+                <!-- Content Grid -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="space-y-6">
+                        <p class="text-lg text-primary-400 font-semibold leading-relaxed">
+                            Étudiant en 3ᵉ année de Bachelor à Sup de Vinci, je recherche une alternance 
+                            en développement informatique à partir d'octobre 2025.
+                        </p>
+                        
+                        <p class="text-gray-300 leading-relaxed">
+                            Curieux et rigoureux, je pratique le développement web et logiciel avec des 
+                            technologies comme C#, Java, Python, ainsi que les bases de données NoSQL. 
+                            Je m'intéresse également aux systèmes et à l'électronique.
+                        </p>
+                        
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-8 pt-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-primary-500 mb-2">20</div>
+                                <div class="text-gray-400 text-sm">Ans</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-primary-500 mb-2">3</div>
+                                <div class="text-gray-400 text-sm">Années d'études</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-primary-500 mb-2">8+</div>
+                                <div class="text-gray-400 text-sm">Technologies</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Info Card -->
+                    <div class="bg-dark-900 rounded-2xl p-8 border border-gray-700 hover-glow">
+                        <h3 class="text-2xl font-bold text-primary-500 mb-6 border-b border-primary-500 pb-3">
+                            Informations personnelles
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-400">Âge</span>
+                                <span class="font-semibold">20 ans</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-400">Téléphone</span>
+                                <span class="font-semibold">06 24 03 18 06</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-400">Email</span>
+                                <span class="font-semibold text-primary-400">corentin.gallais35@gmail.com</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-400">Localisation</span>
+                                <span class="font-semibold">Gosné, France</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-400">Permis</span>
+                                <span class="font-semibold">Permis B (véhiculé)</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Interests -->
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold text-primary-500 mb-4">Centres d'intérêt</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Informatique</span>
+                                <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Jeux vidéo</span>
+                                <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Tennis de table</span>
+                                <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Lecture</span>
+                                <span class="px-3 py-1 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm">Manga</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-dark-900" aria-label="Compétences">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
+                        COMPÉTENCES
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                        Technologies maîtrisées
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                        Un aperçu de mes compétences techniques et de mon niveau dans chaque technologie
+                    </p>
+                </div>
+                
+                <!-- Skills Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Web Development -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
+                        <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Développement Web</h3>
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">HTML</span>
+                                    <span class="text-primary-500 font-mono">70%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="70"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">CSS</span>
+                                    <span class="text-primary-500 font-mono">65%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="65"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">JavaScript</span>
+                                    <span class="text-primary-500 font-mono">55%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="55"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Development -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
+                        <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Développement Logiciel</h3>
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">C#</span>
+                                    <span class="text-primary-500 font-mono">60%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">Java</span>
+                                    <span class="text-primary-500 font-mono">50%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="50"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">Python</span>
+                                    <span class="text-primary-500 font-mono">55%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="55"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Database & Systems -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
+                        <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Bases de données & Systèmes</h3>
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">MongoDB</span>
+                                    <span class="text-primary-500 font-mono">60%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">Linux/Windows</span>
+                                    <span class="text-primary-500 font-mono">60%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="60"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hardware -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-gray-700 hover-glow">
+                        <h3 class="text-2xl font-bold text-primary-500 mb-6 text-center">Électronique & Hardware</h3>
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-semibold">Arduino</span>
+                                    <span class="text-primary-500 font-mono">45%</span>
+                                </div>
+                                <div class="bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar bg-gradient-to-r from-primary-500 to-blue-400 h-full rounded-full" style="width: 0%" data-width="45"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-20 bg-dark-800" aria-label="Parcours">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
+                        PARCOURS
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                        Mon CV
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                        Formation, expériences et projets qui construisent mon profil
+                    </p>
+                </div>
+                
+                <!-- Timeline Grid -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Formation -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Formation</h3>
+                        <div class="space-y-8">
+                            <!-- Bachelor -->
+                            <div class="relative pl-8 border-l-2 border-primary-500">
+                                <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-500 rounded-full"></div>
+                                <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                                    <div class="text-primary-400 font-semibold mb-2">2023 - Aujourd'hui</div>
+                                    <h4 class="text-xl font-bold mb-2">Bachelor - Sup de Vinci</h4>
+                                    <p class="text-gray-300 mb-4">Développement informatique • 2ᵉ année</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Programmation</span>
+                                        <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Web</span>
+                                        <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Bases de données</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Baccalauréat -->
+                            <div class="relative pl-8 border-l-2 border-primary-500">
+                                <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-500 rounded-full"></div>
+                                <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                                    <div class="text-primary-400 font-semibold mb-2">2023</div>
+                                    <h4 class="text-xl font-bold mb-2">Baccalauréat STI2D</h4>
+                                    <p class="text-gray-300 mb-4">Lycée Frédéric Ozanam</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Sciences</span>
+                                        <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Technologie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Expériences -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Expériences</h3>
+                        <div class="space-y-8">
+                            <!-- Lidl -->
+                            <div class="relative pl-8 border-l-2 border-green-500">
+                                <div class="absolute -left-2 top-0 w-4 h-4 bg-green-500 rounded-full"></div>
+                                <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                                    <div class="text-green-400 font-semibold mb-2">10/2024 - Présent</div>
+                                    <h4 class="text-xl font-bold mb-2">Opérateur logistique - Lidl</h4>
+                                    <p class="text-gray-300 mb-4">Préparation de commandes dans une plateforme logistique (job étudiant - samedis)</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Logistique</span>
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Organisation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Stage 6TM -->
+                            <div class="relative pl-8 border-l-2 border-blue-500">
+                                <div class="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
+                                <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                                    <div class="text-blue-400 font-semibold mb-2">2020</div>
+                                    <h4 class="text-xl font-bold mb-2">Stage d'observation - 6TM</h4>
+                                    <p class="text-gray-300 mb-4">Découverte des métiers du développement et du monde de l'informatique</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Développement</span>
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Découverte</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projets -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-primary-500 mb-8 text-center">Projets marquants</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Blog NoSQL -->
+                        <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold">Blog NoSQL</h4>
+                                <span class="text-primary-400 font-semibold text-sm">10/2024 - 11/2024</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Réalisation d'un blog en groupe avec inscription utilisateurs, consultation/ajout d'articles et commentaires.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">MongoDB</span>
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">Tailwind</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Gestion bibliothèque -->
+                        <div class="bg-dark-900 rounded-xl p-6 border border-gray-700 hover-glow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold">Gestion de bibliothèque</h4>
+                                <span class="text-primary-400 font-semibold text-sm">11/2024</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Création/édition/suppression de livres avec stockage JSON et filtrage/recherche.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">C#</span>
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">JSON</span>
+                                <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm">CRUD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="py-20 bg-dark-900" aria-label="Projets GitHub">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-500 to-blue-400 text-white rounded-full text-sm font-semibold mb-4">
+                        CODE
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                        Mes dépôts GitHub
+                    </h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                        Découvrez mes projets et contributions en temps réel
+                    </p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="filter-btn px-4 py-2 bg-primary-500 text-white rounded-lg font-semibold transition-all duration-300" data-filter="all">
+                            Tous
+                        </button>
+                        <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="recent">
+                            Récents
+                        </button>
+                        <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="starred">
+                            Populaires
+                        </button>
+                        <button class="filter-btn px-4 py-2 bg-dark-800 text-gray-300 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" data-filter="archived">
+                            Archivés
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <input type="text" id="repo-search" placeholder="Rechercher un dépôt..." class="bg-dark-800 border border-gray-700 rounded-lg px-4 py-2 pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Repositories Grid -->
+                <div id="repositories-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Loading State -->
+                    <div class="col-span-full text-center py-12">
+                        <div class="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                        <p class="text-gray-400">Chargement des dépôts GitHub...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer sémantique -->
+    <footer class="bg-dark-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold text-primary-500 mb-2">Corentin Gallais</h3>
+                    <p class="text-gray-400 mb-2">Développeur fullstack • Alternance à partir d'octobre 2025</p>
+                    <div class="text-gray-400 text-sm">
+                      <p>corentin.gallais35@gmail.com</p>
+                      <p>06 24 03 18 06</p>
+                    </div>
+
+                    <!-- Liens légaux -->
+                    <nav class="mt-4 text-sm text-gray-400">
+                      <a href="mentions-legales.html" class="hover:text-primary-400 underline-offset-4 hover:underline">Mentions légales</a>
+                      <span class="mx-2" aria-hidden="true">•</span>
+                      <a href="politique-confidentialite.html" class="hover:text-primary-400 underline-offset-4 hover:underline">Politique de confidentialité</a>
+                    </nav>
+
+                    <!-- Dans le footer, remplace juste le span de l'année -->
+                    <p class="text-gray-500 text-xs mt-3">
+                      © <span id="current-year"></span> Corentin Gallais — Tous droits réservés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Keep comments/logs in English
+      (function(){ var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }})();
+    </script>
 
     <!-- Scroll to Top Button -->
     <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-500 text-white rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 transform hover:scale-110 opacity-0 invisible">
@@ -1230,6 +1240,26 @@
                 </div>
             `;
         }
+    </script>
+
+    <!-- À ajouter dans le head ou juste avant la fermeture du body -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Corentin Gallais",
+      "url": "https://corentingallais.fr",
+      "image": "assets/img/20231225_114413-removebg-preview.webp",
+      "jobTitle": "Développeur Fullstack",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "En recherche d'alternance"
+      },
+      "sameAs": [
+        "https://github.com/Corentin-Gallais",
+        "https://www.linkedin.com/in/corentin-gallais-2b32832a5/"
+      ]
+    }
     </script>
 </body>
 </html>

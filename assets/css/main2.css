@@ -1457,3 +1457,33 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Optimisations pour performance mobile */
+@media (max-width: 768px) {
+  /* Réduire la complexité des animations sur mobile */
+  .animate-float {
+    animation: none !important;
+  }
+  
+  /* Assurer la lisibilité des textes sur petit écran */
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 28px !important;
+  }
+  
+  h2 {
+    font-size: 24px !important;
+  }
+}
+
+/* Améliorer l'accessibilité et le contraste */
+:root {
+  /* Couleurs avec meilleur contraste pour accessibilité */
+  --contrast-ratio-high: #fff;
+  --contrast-background: #0d1117;
+  
+  /* Autres variables inchangées */
+}
