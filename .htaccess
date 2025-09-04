@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect HTTP -> HTTPS OR "www" -> apex
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.corentingallais\.fr$ [NC]
+RewriteRule ^ https://corentingallais.fr%{REQUEST_URI} [R=301,L]
